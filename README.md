@@ -19,3 +19,12 @@ My Solutions to LeetCode Study Plan  'SQL 50'
 
 ### 1683. Invalid Tweets
     SELECT tweet_id FROM Tweets WHERE  LENGTH(content) > 15;
+## Easy -> JOIN
+
+### 1378. Replace Employee ID With The Unique Identifier
+    SELECT  EmployeeUNI.unique_id, Employees.name from Employees LEFT JOIN EmployeeUNI ON Employees.id = EmployeeUNI.id;
+
+### 1068. Product Sales Analysis I
+    SELECT Product.product_name, year, price FROM Sales JOIN Product ON Product.product_id = Sales.product_id;
+
+    
