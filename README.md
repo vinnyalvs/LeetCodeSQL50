@@ -27,4 +27,11 @@ My Solutions to LeetCode Study Plan  'SQL 50'
 ### 1068. Product Sales Analysis I
     SELECT Product.product_name, year, price FROM Sales JOIN Product ON Product.product_id = Sales.product_id;
 
-    
+### 1581. Customer Who Visited but Did Not Make Any Transactions
+        SELECT customer_id, COUNT(visit_id) as count_no_trans 
+        FROM Visits
+        WHERE  Visits.visit_id NOT IN (
+            SELECT visit_id
+            FROM Transactions
+        )
+        GROUP BY Visits.customer_id; 
