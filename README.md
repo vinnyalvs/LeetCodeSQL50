@@ -35,3 +35,9 @@ My Solutions to LeetCode Study Plan  'SQL 50'
             FROM Transactions
         )
         GROUP BY Visits.customer_id; 
+
+### 197. Rising Temperature
+    SELECT a.id FROM Weather as a
+    JOIN Weather as b
+    ON a.recordDate = DATE_ADD(b.recordDate, INTERVAL 1 day)
+    where a.temperature > b.temperature;
